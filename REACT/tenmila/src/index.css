@@ -1,0 +1,184 @@
+/* הגדרת צבעים פסטליים */
+:root {
+  --primary-color: #FAD1D1; /* ורוד פסטלי בהיר */
+  --secondary-color: #FF9AA2; /* ורוד פסטלי כהה יותר */
+  --tertiary-color: #FF6B81; /* ורוד כהה */
+  --button-color: #FF4C63; /* ורוד כהה לכפתורים */
+  --button-hover-color: #FF3C4B; /* ורוד כהה יותר לכפתור בעת ריחוף */
+  --text-color: #3D3D3D; /* צבע טקסט כהה */
+  --background-color: #FFE4E1; /* רקע כללי */
+  --link-color: #FF6B81; /* ורוד פסטלי לכחול קישורים */
+  
+  /* הוספת צבעים פסטליים נוספים */
+  --light-blue: #A7D8FF; /* תכלת פסטלי */
+  --mint-green: #B2F2B9; /* מנטה פסטלי */
+  --light-yellow: #FFF5BA; /* צהוב פסטלי בהיר */
+}
+
+/* רקע לכל הדפים */
+html, body {
+  height: 100%;
+  background: var(--background-color);
+}
+
+/* עיצוב כפתורים בגווני ורוד פסטל */
+.btn-primary, .btn-success, .btn-login, .btn-finish {
+  background-color: var(--button-color);
+  color: white;
+  border-radius: 12px;
+  padding: 15px;
+  width: 100%;
+  font-size: 20px;
+  transition: all 0.4s ease-in-out;
+  border: none;
+  box-shadow: 0 4px 15px rgba(255, 107, 129, 0.4);
+}
+
+.btn-primary:hover, .btn-success:hover, .btn-login:hover, .btn-finish:hover {
+  background-color: var(--button-hover-color);
+  transform: translateY(-3px);
+}
+
+/* עיצוב קישורים בגווני ורוד פסטל */
+a {
+  color: var(--link-color);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--button-hover-color);
+  text-decoration: underline;
+}
+
+/* עיצוב טפסים (כולל התחברות) */
+.form-control {
+  font-size: 18px;
+  padding: 15px;
+  margin-bottom: 15px;
+  border-radius: 12px;
+  border: 2px solid var(--secondary-color);
+  background-color: var(--primary-color);
+  color: var(--text-color);
+}
+
+.form-control:focus {
+  border-color: var(--tertiary-color);
+  box-shadow: 0 0 8px rgba(255, 107, 129, 0.6);
+}
+
+/* עיצוב רשימות המילים במבחן */
+.word-option {
+  background-color: var(--button-color);
+  color: white;
+  padding: 10px 20px;
+  border-radius: 8px;
+  margin: 5px 0;
+  width: 80%;
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.word-option:hover {
+  background-color: var(--button-hover-color);
+}
+
+/* עיצוב כותרות */
+h2 {
+  color: var(--tertiary-color);
+  text-align: center;
+  margin-bottom: 20px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+/* עיצוב רשימות */
+.list-group-item {
+  display: flex;
+  justify-content: space-between;
+  font-size: 20px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  margin-bottom: 10px;
+  padding: 15px;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.list-group-item:hover {
+  background-color: var(--mint-green);
+  transform: translateX(5px);
+}
+
+/* עיצוב תפריט ניווט */
+.navbar {
+  background-color: var(--tertiary-color);
+  padding: 15px;
+  border-radius: 0;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.navbar-nav li a {
+  color: white;
+  font-size: 18px;
+  font-weight: 600;
+  text-transform: uppercase;
+  transition: color 0.3s ease-in-out;
+}
+
+.navbar-nav li a:hover {
+  color: var(--primary-color);
+}
+
+/* קונטיינר כללי */
+.container {
+  max-width: 700px;
+  background: rgba(255, 255, 255, 0.2);
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+}
+
+.container:hover {
+  transform: scale(1.05);
+}
+
+/* עיצוב המילים באזור האישי */
+.word-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.word-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 60%;
+  background: var(--primary-color);
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: bold;
+  border: 2px solid var(--secondary-color);
+  min-height: 40px;
+  margin-bottom: 10px;
+}
+
+.word-text, .word-translation {
+  width: 50%;
+  text-align: center;
+}
+
+.word-text {
+  background: var(--tertiary-color);
+  color: white;
+  padding: 8px 10px;
+  border-radius: 5px;
+}
+
+.word-translation {
+  color: var(--text-color);
+  font-size: 16px;
+}
